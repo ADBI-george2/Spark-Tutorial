@@ -1,0 +1,146 @@
+Georges-Mac-mini:spark-1.5.2-bin-hadoop2.6 george$ ./bin/run-example SparkPi 10
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+15/12/27 18:47:25 INFO SparkContext: Running Spark version 1.5.2
+15/12/27 18:47:27 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+15/12/27 18:47:27 INFO SecurityManager: Changing view acls to: george
+15/12/27 18:47:27 INFO SecurityManager: Changing modify acls to: george
+15/12/27 18:47:27 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(george); users with modify permissions: Set(george)
+15/12/27 18:47:29 INFO Slf4jLogger: Slf4jLogger started
+15/12/27 18:47:30 INFO Remoting: Starting remoting
+15/12/27 18:47:30 INFO Remoting: Remoting started; listening on addresses :[akka.tcp://sparkDriver@169.254.89.9:51302]
+15/12/27 18:47:30 INFO Utils: Successfully started service 'sparkDriver' on port 51302.
+15/12/27 18:47:30 INFO SparkEnv: Registering MapOutputTracker
+15/12/27 18:47:31 INFO SparkEnv: Registering BlockManagerMaster
+15/12/27 18:47:31 INFO DiskBlockManager: Created local directory at /private/var/folders/tn/9s8pyrw511x4kk92fjrmk_2h0000gn/T/blockmgr-0ac55c3f-0e42-4f53-a3ba-f51953fcb9ec
+15/12/27 18:47:31 INFO MemoryStore: MemoryStore started with capacity 530.0 MB
+15/12/27 18:47:31 INFO HttpFileServer: HTTP File server directory is /private/var/folders/tn/9s8pyrw511x4kk92fjrmk_2h0000gn/T/spark-a09c98ea-66f4-4150-afd2-2bfb736110fb/httpd-dd75c6e2-05c5-4cdb-af58-360e643abf84
+15/12/27 18:47:31 INFO HttpServer: Starting HTTP Server
+15/12/27 18:47:31 INFO Utils: Successfully started service 'HTTP file server' on port 51303.
+15/12/27 18:47:31 INFO SparkEnv: Registering OutputCommitCoordinator
+15/12/27 18:47:31 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+15/12/27 18:47:32 INFO SparkUI: Started SparkUI at http://169.254.89.9:4040
+15/12/27 18:47:36 INFO SparkContext: Added JAR file:/Users/george/Panzer/Softwares/spark-1.5.2-bin-hadoop2.6/lib/spark-examples-1.5.2-hadoop2.6.0.jar at http://169.254.89.9:51303/jars/spark-examples-1.5.2-hadoop2.6.0.jar with timestamp 1451260056403
+15/12/27 18:47:36 WARN MetricsSystem: Using default name DAGScheduler for source because spark.app.id is not set.
+15/12/27 18:47:36 INFO Executor: Starting executor ID driver on host localhost
+15/12/27 18:47:37 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 51306.
+15/12/27 18:47:37 INFO NettyBlockTransferService: Server created on 51306
+15/12/27 18:47:37 INFO BlockManagerMaster: Trying to register BlockManager
+15/12/27 18:47:37 INFO BlockManagerMasterEndpoint: Registering block manager localhost:51306 with 530.0 MB RAM, BlockManagerId(driver, localhost, 51306)
+15/12/27 18:47:37 INFO BlockManagerMaster: Registered BlockManager
+15/12/27 18:47:39 INFO SparkContext: Starting job: reduce at SparkPi.scala:36
+15/12/27 18:47:39 INFO DAGScheduler: Got job 0 (reduce at SparkPi.scala:36) with 10 output partitions
+15/12/27 18:47:39 INFO DAGScheduler: Final stage: ResultStage 0(reduce at SparkPi.scala:36)
+15/12/27 18:47:39 INFO DAGScheduler: Parents of final stage: List()
+15/12/27 18:47:39 INFO DAGScheduler: Missing parents: List()
+15/12/27 18:47:40 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[1] at map at SparkPi.scala:32), which has no missing parents
+15/12/27 18:47:40 INFO MemoryStore: ensureFreeSpace(1888) called with curMem=0, maxMem=555755765
+15/12/27 18:47:40 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 1888.0 B, free 530.0 MB)
+15/12/27 18:47:40 INFO MemoryStore: ensureFreeSpace(1202) called with curMem=1888, maxMem=555755765
+15/12/27 18:47:40 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 1202.0 B, free 530.0 MB)
+15/12/27 18:47:40 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on localhost:51306 (size: 1202.0 B, free: 530.0 MB)
+15/12/27 18:47:40 INFO SparkContext: Created broadcast 0 from broadcast at DAGScheduler.scala:861
+15/12/27 18:47:40 INFO DAGScheduler: Submitting 10 missing tasks from ResultStage 0 (MapPartitionsRDD[1] at map at SparkPi.scala:32)
+15/12/27 18:47:40 INFO TaskSchedulerImpl: Adding task set 0.0 with 10 tasks
+15/12/27 18:47:40 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, PROCESS_LOCAL, 2162 bytes)
+15/12/27 18:47:40 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1, localhost, PROCESS_LOCAL, 2162 bytes)
+15/12/27 18:47:40 INFO TaskSetManager: Starting task 2.0 in stage 0.0 (TID 2, localhost, PROCESS_LOCAL, 2162 bytes)
+15/12/27 18:47:40 INFO TaskSetManager: Starting task 3.0 in stage 0.0 (TID 3, localhost, PROCESS_LOCAL, 2162 bytes)
+15/12/27 18:47:40 INFO Executor: Running task 2.0 in stage 0.0 (TID 2)
+15/12/27 18:47:40 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+15/12/27 18:47:40 INFO Executor: Running task 1.0 in stage 0.0 (TID 1)
+15/12/27 18:47:40 INFO Executor: Running task 3.0 in stage 0.0 (TID 3)
+15/12/27 18:47:40 INFO Executor: Fetching http://169.254.89.9:51303/jars/spark-examples-1.5.2-hadoop2.6.0.jar with timestamp 1451260056403
+15/12/27 18:47:41 INFO Utils: Fetching http://169.254.89.9:51303/jars/spark-examples-1.5.2-hadoop2.6.0.jar to /private/var/folders/tn/9s8pyrw511x4kk92fjrmk_2h0000gn/T/spark-a09c98ea-66f4-4150-afd2-2bfb736110fb/userFiles-8cf31984-fc13-47dc-b4be-85ea1e377140/fetchFileTemp4488845527280498473.tmp
+15/12/27 18:47:45 INFO Executor: Adding file:/private/var/folders/tn/9s8pyrw511x4kk92fjrmk_2h0000gn/T/spark-a09c98ea-66f4-4150-afd2-2bfb736110fb/userFiles-8cf31984-fc13-47dc-b4be-85ea1e377140/spark-examples-1.5.2-hadoop2.6.0.jar to class loader
+15/12/27 18:47:45 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 1031 bytes result sent to driver
+15/12/27 18:47:45 INFO Executor: Finished task 3.0 in stage 0.0 (TID 3). 1031 bytes result sent to driver
+15/12/27 18:47:45 INFO Executor: Finished task 1.0 in stage 0.0 (TID 1). 1031 bytes result sent to driver
+15/12/27 18:47:45 INFO Executor: Finished task 2.0 in stage 0.0 (TID 2). 1031 bytes result sent to driver
+15/12/27 18:47:45 INFO TaskSetManager: Starting task 4.0 in stage 0.0 (TID 4, localhost, PROCESS_LOCAL, 2162 bytes)
+15/12/27 18:47:45 INFO Executor: Running task 4.0 in stage 0.0 (TID 4)
+15/12/27 18:47:45 INFO TaskSetManager: Starting task 5.0 in stage 0.0 (TID 5, localhost, PROCESS_LOCAL, 2162 bytes)
+15/12/27 18:47:45 INFO Executor: Running task 5.0 in stage 0.0 (TID 5)
+15/12/27 18:47:45 INFO TaskSetManager: Starting task 6.0 in stage 0.0 (TID 6, localhost, PROCESS_LOCAL, 2162 bytes)
+15/12/27 18:47:45 INFO TaskSetManager: Starting task 7.0 in stage 0.0 (TID 7, localhost, PROCESS_LOCAL, 2162 bytes)
+15/12/27 18:47:45 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 4472 ms on localhost (1/10)
+15/12/27 18:47:45 INFO TaskSetManager: Finished task 3.0 in stage 0.0 (TID 3) in 4353 ms on localhost (2/10)
+15/12/27 18:47:45 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 4355 ms on localhost (3/10)
+15/12/27 18:47:45 INFO Executor: Running task 7.0 in stage 0.0 (TID 7)
+15/12/27 18:47:45 INFO TaskSetManager: Finished task 2.0 in stage 0.0 (TID 2) in 4355 ms on localhost (4/10)
+15/12/27 18:47:45 INFO Executor: Running task 6.0 in stage 0.0 (TID 6)
+15/12/27 18:47:45 INFO Executor: Finished task 4.0 in stage 0.0 (TID 4). 1031 bytes result sent to driver
+15/12/27 18:47:45 INFO TaskSetManager: Starting task 8.0 in stage 0.0 (TID 8, localhost, PROCESS_LOCAL, 2162 bytes)
+15/12/27 18:47:45 INFO Executor: Running task 8.0 in stage 0.0 (TID 8)
+15/12/27 18:47:45 INFO TaskSetManager: Finished task 4.0 in stage 0.0 (TID 4) in 22 ms on localhost (5/10)
+15/12/27 18:47:45 INFO Executor: Finished task 5.0 in stage 0.0 (TID 5). 1031 bytes result sent to driver
+15/12/27 18:47:45 INFO TaskSetManager: Starting task 9.0 in stage 0.0 (TID 9, localhost, PROCESS_LOCAL, 2162 bytes)
+15/12/27 18:47:45 INFO Executor: Running task 9.0 in stage 0.0 (TID 9)
+15/12/27 18:47:45 INFO TaskSetManager: Finished task 5.0 in stage 0.0 (TID 5) in 32 ms on localhost (6/10)
+15/12/27 18:47:45 INFO Executor: Finished task 6.0 in stage 0.0 (TID 6). 1031 bytes result sent to driver
+15/12/27 18:47:45 INFO TaskSetManager: Finished task 6.0 in stage 0.0 (TID 6) in 59 ms on localhost (7/10)
+15/12/27 18:47:45 INFO Executor: Finished task 8.0 in stage 0.0 (TID 8). 1031 bytes result sent to driver
+15/12/27 18:47:45 INFO TaskSetManager: Finished task 8.0 in stage 0.0 (TID 8) in 75 ms on localhost (8/10)
+15/12/27 18:47:45 INFO Executor: Finished task 7.0 in stage 0.0 (TID 7). 1031 bytes result sent to driver
+15/12/27 18:47:45 INFO TaskSetManager: Finished task 7.0 in stage 0.0 (TID 7) in 92 ms on localhost (9/10)
+15/12/27 18:47:45 INFO Executor: Finished task 9.0 in stage 0.0 (TID 9). 1031 bytes result sent to driver
+15/12/27 18:47:45 INFO TaskSetManager: Finished task 9.0 in stage 0.0 (TID 9) in 68 ms on localhost (10/10)
+15/12/27 18:47:45 INFO DAGScheduler: ResultStage 0 (reduce at SparkPi.scala:36) finished in 4.614 s
+15/12/27 18:47:45 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool
+15/12/27 18:47:45 INFO DAGScheduler: Job 0 finished: reduce at SparkPi.scala:36, took 5.536547 s
+Pi is roughly 3.140944
+15/12/27 18:47:45 INFO SparkUI: Stopped Spark web UI at http://169.254.89.9:4040
+15/12/27 18:47:45 INFO DAGScheduler: Stopping DAGScheduler
+15/12/27 18:47:45 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+15/12/27 18:47:45 INFO MemoryStore: MemoryStore cleared
+15/12/27 18:47:45 INFO BlockManager: BlockManager stopped
+15/12/27 18:47:45 INFO BlockManagerMaster: BlockManagerMaster stopped
+15/12/27 18:47:45 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+15/12/27 18:47:45 INFO SparkContext: Successfully stopped SparkContext
+15/12/27 18:47:45 INFO ShutdownHookManager: Shutdown hook called
+15/12/27 18:47:45 INFO ShutdownHookManager: Deleting directory /private/var/folders/tn/9s8pyrw511x4kk92fjrmk_2h0000gn/T/spark-a09c98ea-66f4-4150-afd2-2bfb736110fbget_ipython().magic(u'logstart sections0-3.logs append')
+print("Hello world")
+a=sc.parallelize([1,2,3,4])
+a.collect()
+rdd_1 = sc.parallelize([1,2,3,4,5,6,7])
+rdd_2 = sc.textFile('data/mllib/pic_data.txt')
+rdd_2
+rdd_1
+rdd=sc.parallelize([1,2,3])
+rdd.collect()
+rdd.count()
+rdd.first()
+rdd.take(5)
+def add(x, y):
+    return x + y
+
+def multiply(x, y):
+    return x * y
+
+rdd.reduce(add)
+rdd.reduce(multiply)
+def square(x):
+    return x**2
+
+rdd_squared = rdd.map(square)
+rdd_squared.collect()
+rdd_squared2 = rdd.map(lambda x: x**2)
+rdd_squared2.collect()
+def positive(x): return x>0
+rdd = sc.parallelize([1,2,-3,4,-5,6,7])
+rdd_pos = rdd.filter(positive)
+rdd_pos.collect()
+rdd  = sc . parallelize ([( "a" ,  1 ),  ( "a" ,  2 ),  ( "b" ,  1 )  ])
+rdd_grouped = rdd.groupByKey()
+rdd_grouped.collect()
+rdd =sc.parallelize ([("a",1),("a",2),("b",1)])
+rdd_grouped = rdd.groupByKey()
+rdd_grouped.collect()
+rdd = sc.parallelize([2,3,4])
+rdd.map(lambda x: range(1,x)).collect()
+rdd.flatMap(lambda x: range(1,x)).collect()
+text = sc.parallelize(["I stepped on a Corn Flake, now I am a Cereal Killer",\])
+text = sc.parallelize(["I stepped on a Corn Flake, now I am a Cereal Killer",\])
+text = sc.parallelize(["I stepped on a Corn Flake, now I am a Cereal Killer", "Hello world inside hello world", "Banana error", "Not Lorem Ipsum", "what a wonderful day", "what up?"])
+counts = text.flatMap(lambda line: line.split(" ")).map(lambda word: (word, 1)).reduceByKey(lambda a,b: a+b)
+counts.collect()
+get_ipython().magic(u'logstop')
